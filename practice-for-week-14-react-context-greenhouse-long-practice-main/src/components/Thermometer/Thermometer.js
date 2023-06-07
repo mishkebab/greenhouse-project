@@ -10,7 +10,6 @@ function Thermometer() {
 
   useEffect(() => {
       const timer = setTimeout(() => {
-      console.log("1 second has passed")
       if (goalTemp < temp) {
         setTemp(temp - 1);
       } else if (goalTemp > temp) {

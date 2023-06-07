@@ -10,7 +10,6 @@ function Hygrometer() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
-    console.log("1 second has passed")
     if (goalHumidity < humidity) {
       setHumidity(humidity - 1);
     } else if (goalHumidity > humidity) {
