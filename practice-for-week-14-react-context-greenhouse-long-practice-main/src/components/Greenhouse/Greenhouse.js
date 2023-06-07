@@ -5,17 +5,19 @@ import "./Greenhouse.css";
 import LightSwitch from "./LightSwitch";
 import ClimateStats from "./ClimateStats";
 
+// we imported this
 import { useTheme } from "../../context/ThemeContext";
 
 function Greenhouse() {
-    const { themeName, setThemeName } = useTheme();
+    // created these two variables
+    const { themeName } = useTheme();
     const imageSource = themeName === "day" ? dayImage : nightImage;
 
     return (
         <section>
             <img
                 className="greenhouse-img"
-                src={imageSource}
+                src={imageSource} // called our variable to render that img
                 alt="greenhouse"
             />
             <LightSwitch />

@@ -4,7 +4,7 @@ export const ThemeContext = createContext();
 
 export const useTheme = () => useContext(ThemeContext);
 
-export default function ThemeProvider({ children }) {
+export default function ThemeProvider(props  ) {
   const [themeName, setThemeName] = useState("day");
 
   return (
@@ -14,7 +14,7 @@ export default function ThemeProvider({ children }) {
         setThemeName
       }}
     >
-      {children}
+      {props.children}
     </ThemeContext.Provider>
   );
 }

@@ -8,10 +8,12 @@ export const ClimateContext = createContext();
 export const useClimate = () => useContext(ClimateContext);
 
 export default function ClimateProvider({ children }) {
+  // instantiated these 2
     const [temp, setTemp] = useState(50);
     const [humidity, setHumidity] = useState(40);
   
     return (
+      // added them to value
       <ClimateContext.Provider
         value={{temp, setTemp, humidity, setHumidity}}
       >
